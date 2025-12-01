@@ -637,7 +637,7 @@ def calculate_modified_stat(ammo: Ammo, stat: str, modifier: float | None, ui_da
     base_value = ammo.ui_data[stat]
   else:
     base_value = getattr(ammo.stats, stat).value
-  if stat == "penetration": # penetration uses an inverse formula
+  if stat == "penetration" and not ui_data: # penetration uses an inverse formula, unless it's for UI
     return base_value * (1 - modifier / 100)
   if stat == "max_range": # max_range is an exact value
     return int(modifier)
