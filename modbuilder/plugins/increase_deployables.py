@@ -23,6 +23,7 @@ class Deployable(str, Enum):
   TENT = "tent"
   TRIPOD = "tripodstand"
   GROUNDBLIND = "groundblind"
+  WATERFOWLBLIND = "waterfowlblind"
   DECOY = "decoy"
   BAIT_FEEDER = "bait_feeder"
 
@@ -41,6 +42,7 @@ def is_deployable_prop(value: str) -> bool:
     Deployable.TENT,
     Deployable.TRIPOD,
     Deployable.GROUNDBLIND,
+    Deployable.WATERFOWLBLIND,
     Deployable.DECOY,
     Deployable.BAIT_FEEDER,
   ))
